@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+}
+
+.weather-container {
+    width: 90%;
+    max-width: 450px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #4c6ef5;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.search-box button:hover {
+    background: #364fc7;
+}
+
+#loading {
+    margin-top: 20px;
+    color: #555;
+}
+
+#error {
+    margin-top: 20px;
+    color: red;
+}
+
+.weather-card {
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background: #f5f7ff;
+}
+
+.weather-card h2 {
+    margin-bottom: 10px;
+}
+
+.weather-icon {
+    font-size: 55px;
+    margin: 10px 0;
+}
+
+#temperature {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+#condition {
+    text-transform: capitalize;
+
+    color: #555;
+
+    margin-bottom: 20px;
+}
+
+.weather-details {
+    display: flex;
+
+    justify-content: space-around;
+
+    gap: 20px;
+}
+
+.weather-details div {
+    background: white;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    width: 45%;
+}
+
+.weather-details p {
+    margin-top: 8px;
+    color: #555;
+}
+
+@media (max-width: 500px) {
+
+    .weather-container {
+        padding: 20px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .weather-details {
+        flex-direction: column;
+    }
+
+    .weather-details div {
+        width: 100%;
+    }
+}
